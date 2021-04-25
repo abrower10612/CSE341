@@ -6,11 +6,11 @@ const requestHandler = (req, res) => {
   if (url === '/') {
     res.write('<html>');
     res.write('<head><title>Enter Message</title><head>');
-    res.write('<body><h1>Welcome!</h1><form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</form></body>');
+    res.write('<body><h1><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</form></body>');
     res.write('</html>');
     return res.end();
   }
-  if (url === '/create-user' && method === 'POST') {
+  if (url === '/message' && method === 'POST') {
     const body = [];
     req.on('data', (chunk) => {
       console.log(chunk);
