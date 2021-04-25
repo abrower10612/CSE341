@@ -1,0 +1,45 @@
+1. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/abrower10612/CSE341/tree/main/week01/cse341-project-master
+
+
+2. Briefly list and describe the elements of the application that are functioning. 
+
+I was able to get the create user element working as well as the list of users.
+
+
+3. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+To my knowledge, everything is working properly. 
+
+
+
+4. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+
+The coolest thing I learned from this assignment was how GET and POST work within Node.js. I really thought it was cool to see how it navigates from page to page based on the POST that takes place. 
+
+
+
+5. If you could change this assignment to be more effective or helpful, what would you change?
+
+The instructions are confusing as there seems to be two versions of the instructions. I've done what I think is correct but it's hard to tell when the step by step is different in two different places. 
+
+
+
+6. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+
+
+I feel that my assignment falls into the 4 - Meets requirements section
+
+
+
+7. Provide a brief justification (1-2 sentences) for selecting that category.
+
+The justification for being in category 4 is that I followed the instructions as closely as possible, but I ran out of time before I was able to implement some creativity that excels above and beyond the requirements. 
+
