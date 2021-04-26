@@ -53,17 +53,23 @@ const requestHandler = (req, res) => {
               + '<h1>'
               + 'No users found'
               + '</h1>'
+              + '<form action="/" method="POST">'
+                + '<button type="submit">Back</button>'
+              + '</form>'
             + '</body>');
         }
         else {
           res.write(
             '<body>' 
-              + '<h1>')
+              + '<h1>Users:<br>')
               for (user of userList) {
                 res.write(user);
                 res.write('<br>');
               }
           res.write('</h1>'
+              + '<form action="/" method="POST">'
+                + '<button type="submit">Back</button>'
+              + '</form>'
             + '</body>');
         }
         res.write('</html>');
