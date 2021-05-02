@@ -1,0 +1,39 @@
+CSE 341 – Prove02 – Andrew Brower
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+
+https://cse341-prove02-abrower10612.herokuapp.com/
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/abrower10612/CSE341
+
+3. Briefly list and describe the elements of the application that are functioning. 
+
+Everything in the application is functioning properly. The My Shop page correctly displays the books that are added in and the add-product page is correctly taking in user input to display the books on the My Shop page. The 404 page is also displayed if any other url is provided that does not match either ‘/’ or ‘add-product’.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+Everything is working correctly and there are no errors.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I think my favorite “cool” part about this assignment was learning how EJS works and how to imbed it right into the HTML inside the .ejs files. I also really loved learning how to deploy an app to Heroku, as that is something I’ve wanted to learn for a long time now. 
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+
+I think because we are only using EJS rather than handlebars or pug, it would be good to direct students to not worry about either watching those tutorial videos on those topics or just to watch them but not stress about learning it really thoroughly. 
+
+7. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+
+I feel that my app is best described with level 5 this week.
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I added the capability for a user to enter, not only the title and summary of the book, but also a web address link for the image to display and also the price in USD currency. I made sure that the price displays in that USD currency so they don’t have to type in the dollar sign ($) or commas, the code will do that for them. I used EJS for these extra components, which has solidified my understanding of EJS and helped me understand it very well. 
+
