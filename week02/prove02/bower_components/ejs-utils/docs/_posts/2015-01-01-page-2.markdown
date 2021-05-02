@@ -1,0 +1,374 @@
+---
+layout : default
+name : usage
+title : Usage
+description : |
+
+  <!-- CMC7 -->
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CMC7</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="cmc7">CMC7 - Validate</label>
+              <input type="text" class="form-control" id="cmc7" placeholder="Enter CMC7" value="341003630010000055200005306998" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CODE</h2>
+      <pre><code class="js" >Util.cmc7.validate('341003630010000055200005306998');</code></pre>
+    </div>
+  </div>
+
+  <!-- CNPJ -->
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CNPJ</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="cpf">CNPJ - Validate</label>
+              <input type="text" class="form-control" id="cnpj" placeholder="Enter CNPJ" value="62173620000180" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CODE</h2>
+      <pre><code class="js">Util.cnpj.validate('62173620000180');</code></pre>
+      <p class="lead"> OR </p>
+      <pre><code class="js">Util.cnpj.validate('621.736.200/001-80');</code></pre>
+    </div>
+  </div>
+
+  <!-- CPF -->
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CPF</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="cpf">CPF - Validate</label>
+              <input type="text" class="form-control" id="cpf" placeholder="Enter CPF" value="29727693172" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CODE</h2>
+      <pre><code class="js">Util.cpf.validate('29727693172');</code></pre>
+      <p class="lead"> OR </p>
+      <pre><code class="js">Util.cpf.validate('297.276.931-72');</code></pre>
+    </div>
+  </div>
+
+  <!-- DATE -->
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">DATE</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Date Now Format Br</label>
+              <input type="text" class="form-control" id="dateBr" value="" >
+            </div>
+            <button type="button" class="btn btn-default" id="btnDateBr" >Test</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CODE</h2>
+      <pre><code class="js"># Date Now Format Br
+  Util.date.nowBr();</code></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateSql">Date Now Format SQL</label>
+              <input type="text" class="form-control" id="dateSql" value="" >
+            </div>
+            <button type="button" class="btn btn-default" id="btnDateSql" >Test</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Date Now Format SQL
+  Util.date.nowSql();</code></pre>
+    </div>
+  </div>  
+
+  <!-- MASK -->
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">MASK</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Date Format Br</label>
+              <input type="text" class="form-control" id="maskDateBr" value="" onkeydown="Util.mask.exec(this, Util.mask.dateBr)" maxlength="10" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">CODE</h2>
+      <pre><code class="js"># Mask to Date Format Br
+  Util.mask.dateBr('01052015');
+
+  # Or add the Mask on Input Field
+  &lt;input type="text" onkeydown="Util.mask.exec(this, Util.mask.dateBr)" maxlength="10" &gt;</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Hour</label>
+              <input type="text" class="form-control" id="maskHour" value="" onkeydown="Util.mask.exec(this, Util.mask.hour)" maxlength="5" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to Hour
+  Util.mask.hour('1320');
+
+  # Or add the Mask on Input Field
+  &lt;input type="text" onkeydown="Util.mask.exec(this, Util.mask.hour)" maxlength="5" &gt;</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Telephone Br</label>
+              <input type="text" class="form-control" id="maskTelBr" value="" onkeydown="Util.mask.exec(this, Util.mask.telBr)" maxlength="17" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to Telephone Br
+  Util.mask.telBr('4299140801');
+
+  # Or add the Mask on Input Field
+  &lt;input type="text" onkeydown="Util.mask.exec(this, Util.mask.telBr)" maxlength="17" &gt;</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to CEP</label>
+              <input type="text" class="form-control" id="maskCEP" value="" onkeydown="Util.mask.exec(this, Util.mask.cep)" maxlength="11" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to CEP
+  Util.mask.cep('95701320');
+
+  # Or add the Mask on Input Field
+  &lt;input type="text" onkeydown="Util.mask.exec(this, Util.mask.cep)" maxlength="11" &gt;</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to CPF</label>
+              <input type="text" class="form-control" id="maskCPF" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to CPF
+  Util.mask.cpf('29727693172');</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to CNPJ</label>
+              <input type="text" class="form-control" id="maskCNPJ" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to CNPJ
+  Util.mask.cnpj('62173620000180');</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Number</label>
+              <input type="text" class="form-control" id="maskNumber" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to Number
+  Util.mask.number('100^%u&.12');</code></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Currency</label>
+              <input type="text" class="form-control" id="maskCurrency" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to Currency
+  Util.mask.currency('10000');</code></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Currency Br</label>
+              <input type="text" class="form-control" id="maskCurrencyBr" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to Currency Br
+  Util.mask.currencyBr('10000');</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to Currency Br Focus Out</label>
+              <input type="text" class="form-control" id="maskCurrencyBrFocusOut" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to Currency Br Focus Out
+  Util.mask.currencyBrFocusOut('10000');</code></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="dateBr">Mask to CFOP</label>
+              <input type="text" class="form-control" id="maskCFOP" value="" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <pre><code class="js"># Mask to CFOP
+  Util.mask.cfop('6111');</code></pre>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-sm-12">
+      <hr>
+      <div class="clearfix"></div>
+      <h2 class="section-heading">to be continued...</h2>
+    </div>
+  </div>  
+
+---

@@ -1,0 +1,34 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+name : ejs-utils
+description : Functions in javascript, jquery, jquery-ui, to help developers in simple situations of workday.
+author : emalherbi
+
+menuHome :
+  - name : Home
+    link : 'home'
+menu :
+  - name : Install
+    link : 'install'
+  - name : Usage
+    link : 'usage'
+  - name : Test
+    link : 'test'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown : kramdown
+permalink : pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+github :
+  - user : emalherbi
+    repo : ejs-utils
