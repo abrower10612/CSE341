@@ -1,0 +1,8 @@
+---
+layout : default
+name : test
+title : Test
+description : |
+  <p class="lead">QUnit is a powerful, easy-to-use JavaScript unit testing framework. It's used by the jQuery, jQuery UI and jQuery Mobile projects and is capable of testing any generic JavaScript code, <a target="_blank" href="https://github.com/jquery/qunit/tree/master/test">including itself!</a>
+
+---

@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+<%- include('includes/navigation.ejs') %>
+    <main>
+        <form class="product-form" action="/admin/add-product" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+                <label for="title">Price</label>
+                <input type="text" name="price" id="price">
+                <label for="title">Pixabay Image Address<br>(https://cdn.pixabay.com/...)</label>
+                <input type="text" name="image" id="image">
+                <label for="title">Summary</label>
+                <textarea type="text" name="summary" id="summary" cols=38 rows=7></textarea>
+            </div>
+
+            <button class="btn" type="submit">Add Product</button>
+        </form>
+    </main>
+<%- include('includes/end.ejs') %>
