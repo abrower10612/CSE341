@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <form action="ta03/filter" method="POST">
+      <input type="text" placeholder="Search" name="tag" style="color: black">
+      <button class="btn-success" type="submit">Filter</button>
+    </form>
+    <% data.forEach(x => { %>
+      <div class="card" style="border: solid 2px black; margin: 20px; padding: 20px; background: whitesmoke; color: black;">
+        <img src="<%= x.imageUrl %>" alt="<%= x.name %>" class="card-img-top" style="width: 50%;"> 
+        <h2 class="card-title"><%= x.name %></h2>
+        <h3 class="card-subtitle">$<%= x.price %></h3>
+        <p class="card-text" style="color: black"><%= x.description %></p>
+      </div>
+    <% }); %>
+  </div>
+</div>
+<div class="container">
+  
+</div>
+
+
+</body>
+</html>
