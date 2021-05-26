@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="cart">
+            <% if (products.length > 0) { %>
+                <h1>Your Cart</h1>
+                <hr>
+                <div class="cartItems">
+                    <% let subtotal = 0;
+                        products.forEach(p => { 
+                        subtotal += p.price;        
+                    %>
+                        <div class="cartItem">
+                            <p><%= p.productId.title %> </p>
+                            <p><%= "Quantity: " + p.quantity %></p>
+                            <p><%= "Price: $" + p.price %></p>
+                            <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <button class="btn" type="submit" onclick="return window.confirm('Remove this item from your cart?')">Delete</button>
+                            </form>
+                        </div>
+                    <% }) %>
+                </div>
+                <hr>
+                <div class="centered">
+                    <h3>
+                        Subtotal: $<%= subtotal.toFixed(2) %>
+                    </h3>
+                    <form action="/create-order" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button type="submit" class="btn">Order Now!</button>
+                    </form>
+                </div>
+            <% } else { %>
+                <h1>No Products in Cart</h1>
+            <% } %>
+        </main>
+        <%- include('../includes/end.ejs') %>

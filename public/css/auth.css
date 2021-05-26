@@ -1,0 +1,30 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    border: solid 2px #0096df;
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+.loginEmail label,
+.loginPassword label  {
+    display: block;
+}
+ 
+.loginEmail input,
+.loginPassword input  {
+    width: 100%;
+}
+ 
+
+.loginEmail,
+.loginPassword {
+    margin-bottom: 10px;
+}
+
+.login-btn {
+    width: 100px;
+    margin-top: 10px;
+}
