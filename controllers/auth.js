@@ -11,7 +11,8 @@ const User = require('../models/user');
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-      api_key: process.env.sendGridAPIKey
+      // api_key: process.env.sendGridAPIKey
+      api_key: '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'
     }
   })
 );
@@ -149,12 +150,12 @@ exports.postSignup = (req, res, next) => {
     })
     .then(result => {
       res.redirect('/login');
-      // return transporter.sendMail({
-      //   to: email,
-      //   from: 'bro12112@byui.edu',
-      //   subject: 'Signup succeeded!',
-      //   html: '<h1>You successfully signed up!</h1>'
-      // });
+      return transporter.sendMail({
+        to: email,
+        from: 'bro12112@byui.edu',
+        subject: 'Signup succeeded!',
+        html: '<h1>You successfully signed up!</h1>'
+      });
     })
     .catch(err => {
       console.log(err);
