@@ -4,19 +4,17 @@ const MongoClient = mongodb.MongoClient;
 let _db;
 
 const mongoConnect = callback => {
-  MongoClient.connect(
-        'mongodb+srv://abrower10612:Tzztt4oI4QfmpaSs@bluejayguitars.qxevv.mongodb.net/shop?retryWrites=true&w=majority'
-        )
-        .then(client => {
-          console.log('Connected!');
-          _db = client.db();
-          callback();
-        })
-        .catch(err => {
-          console.log(err);
-          throw err;
-        });
-    };
+  MongoClient.connect('mongodb+srv://abrower10612:Tzztt4oI4QfmpaSs@bluejayguitars.qxevv.mongodb.net/shop?retryWrites=true&w=majority')
+  .then(client => {
+    console.log('Connected!');
+    _db = client.db();
+    callback();
+  })
+  .catch(err => {
+    console.log(err);
+    throw err;
+  });
+};
 
     const getDb = () => {
       if (_db) {
