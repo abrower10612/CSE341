@@ -159,7 +159,7 @@ exports.postSignup = (req, res, next) => {
         subject: 'Verify Your BlueJay Guitars Account',
         html: `
           <h1>Thanks for signing up!</h1>
-          <a href="https://cse341-prove06-andrewbrower.herokuapp.com/login">Please click here to verify your email address and log in</a>
+          <a href="https://cse341-prove06-andrewbrower.herokuapp.com/login">Please click here to verify your email address and log in.</a>
           <p>If you do not recognize this email, you can just disregard it or contact us at support@bluejayguitars.com</p>
         `
       });
