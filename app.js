@@ -1,4 +1,4 @@
-require('dotenv').config({ path: __dirname + '/.env' })
+require('dotenv').config({path: path.join(__dirname, '.env')});
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -10,8 +10,8 @@ const flash = require('connect-flash');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-// const MONGODB_URI = process.env.MONGODB_URI;
-const MONGODB_URI = 'mongodb+srv://abrower10612:Tzztt4oI4QfmpaSs@bluejayguitars.qxevv.mongodb.net/shop?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
+// const MONGODB_URI = 'mongodb+srv://abrower10612:Tzztt4oI4QfmpaSs@bluejayguitars.qxevv.mongodb.net/shop?retryWrites=true&w=majority';
 
 const app = express();
 const store = new MongoDBStore({
