@@ -28,3 +28,12 @@
     width: 100px;
     margin-top: 10px;
 }
+
+.verifyAccount {
+    text-align: center;
+}
+
+.verifyAccount h1 {
+    color: #0096df;
+    text-align: center;
+}

@@ -235,3 +235,7 @@ form {
   text-align: center;
   color: #0096df;
 }
+
+.error {
+  text-align: center;
+}

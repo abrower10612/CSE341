@@ -115,7 +115,11 @@ exports.postLogin = (req, res, next) => {
         res.redirect('/login');
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
+    });
 };
 
 exports.postSignup = (req, res, next) => {
@@ -148,18 +152,39 @@ exports.postSignup = (req, res, next) => {
       return user.save();
     })
     .then(result => {
-      res.redirect('/login');
+      res.redirect('/verifyEmail');
       return transporter.sendMail({
         to: email,
         from: 'bro12112@byui.edu',
-        subject: 'Signup succeeded!',
-        html: '<h1>You successfully signed up!</h1>'
+        subject: 'Verify Your BlueJay Guitars Account',
+        html: `
+          <h1>Thanks for signing up!</h1>
+          <a href="https://cse341-prove06-andrewbrower.herokuapp.com/login">Please click here to verify your email address and log in</a>
+          <p>If you do not recognize this email, you can just disregard it or contact us at support@bluejayguitars.com</p>
+        `
       });
     })
     .catch(err => {
-      console.log(err);
-  })
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
+    });
 };
+
+exports.getVerifyEmail = (req, res, next) => {
+  let errorMessage = req.flash('error');
+  if (errorMessage.length > 0) {
+    errorMessage = errorMessage[0];
+  } else {
+    errorMessage = null;
+  }
+  res.render('auth/verifyEmail', {
+    path: '/verifyEmail',
+    pageTitle: 'Verify Email',
+    errorMessage: errorMessage,
+    validationErrors: []
+  });
+}
  
 exports.postLogout = (req, res, next) => {
   req.session.destroy((err) => {
@@ -216,7 +241,9 @@ exports.postReset = (req, res, next ) => {
       });
     })
     .catch(err => {
-      console.log(err);
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
     });
   });
 };
@@ -243,7 +270,9 @@ exports.getNewPassword = (req, res, next) => {
     });
   })
   .catch(err => {
-    console.log(err)
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    return next(error);
   });
 }
 
@@ -271,6 +300,8 @@ exports.postNewPassword = (req, res, next) => {
     res.redirect('/login');
   })
   .catch(err => {
-    console.log(err);
-  })
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    return next(error);
+  });
 }

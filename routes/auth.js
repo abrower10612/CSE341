@@ -29,6 +29,8 @@ router.post(
     authController.postLogin
 );
 
+router.get('/verifyEmail', authController.getVerifyEmail);
+
 router.post(
     '/signup', 
     [
